@@ -1,5 +1,6 @@
 import pymysql
 
+
 def dbConnect():
     connection = pymysql.connect(host='localhost',
                                  user='tflg',
