@@ -21,7 +21,7 @@ if __name__ == '__main__':
                     local_id = row['local_id']
                     cursor.execute('UPDATE profiles SET status=1 WHERE name=%s', name)
                     connection.commit()
-                    runSh(wguard_dir + 'create.sh ' + name + " " + local_id)
+                    runSh(f"{wguard_dir}create.sh {name} {local_id}")
 
             with connection.cursor() as cursor:
                 cursor.execute('SELECT * FROM profiles WHERE status=1')
@@ -34,7 +34,7 @@ if __name__ == '__main__':
                         local_id = row['local_id']
                         cursor.execute('UPDATE profiles SET status=0 WHERE id=%s', row_id)
                         connection.commit()
-                        runSh(wguard_dir + 'delete.sh ' + name)
+                        runSh(f"{wguard_dir}delete.sh {name}")
                         con = db.dbConnect()
                         with con:
                             with con.cursor() as cur:
