@@ -16,11 +16,12 @@ return new class extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->string("alias_name");
-            $table->string("comment");
+            $table->string("alias_name")->nullable();
+            $table->string("comment")->nullable();
             $table->integer("local_id");
-            $table->integer("status");
-            $table->integer("days");
+            $table->integer("status")->default(99);
+            $table->integer("days")->default(0);
+            $table->integer("days_left")->default(0);
             $table->dateTime("expired");
             $table->timestamps();
         });

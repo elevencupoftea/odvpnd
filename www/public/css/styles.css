@@ -111,16 +111,26 @@ form{
 }
 
 table{
-
-    width: 50rem;
+    max-width: 50rem;
     background: var(--reverse-color);
     padding: .5rem;
+    width: 80vw;
+    font-size: .7rem;
+    border-spacing: 0px;
+    
+}
+tbody tr:nth-child(odd) {
+  background-color: #f3fbff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ebf9ff;
 }
 tr{
-
+    
 }
-td{ 
-
+td{
+    padding: 5px;
 }
 
 /*INPUTS*/

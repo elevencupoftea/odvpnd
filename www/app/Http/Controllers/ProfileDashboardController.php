@@ -9,12 +9,26 @@ use Illuminate\Http\Request;
 class ProfileDashboardController extends Controller
 {
     public function showDashboard(){
+
+
         $profiles = Profile::where('status', 1)
             ->orderByDesc('id')
             ->get();
         if($profiles){
+            foreach ($profiles as $profile){
+                $diff = strtotime($profile->expired)-time();
+                $hours =  round($diff / (60 * 60 * 24));
+                $upd_profile = Profile::find($profile->id);
+                $upd_profile->days_left = $hours;
+                $upd_profile->save();
+            }
+
+            $profiles = Profile::where('status', 1)
+                ->orderByDesc('id')
+                ->get();
             return view('pages.dashboard',['profiles'=>$profiles]);
         }
+        return view('pages.dashboard',['profiles'=>$profiles]);
     }
 
     public function addProfile(Request $r){

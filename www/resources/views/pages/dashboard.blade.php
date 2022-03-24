@@ -18,6 +18,7 @@
                     <td>Name</td>
                     <td>Alias</td>
                     <td>Status</td>
+                    <td>Days left</td>
                     <td>Comment</td>
                 </tr>
             </thead>
@@ -31,6 +32,7 @@
                         @else
                             <td>Expired</td>
                         @endif
+                        <td>{{$profile->days_left}}</td>
                         <td>{{$profile->comment}}</td>
                     </tr>
                 @endforeach
