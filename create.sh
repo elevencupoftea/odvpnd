@@ -21,7 +21,7 @@ read CLIENT_PRIVATE_KEY <keys/${1}_priv.key
 read SERVER_PUBLIC_KEY <keys/server_pub.key
 read CLIENT_PUBLIC_KEY <keys/${1}_pub.key
 
-echo"
+echo "
 [Interface]
 PrivateKey = ${CLIENT_PRIVATE_KEY}
 Address = ${IP_FULL}
