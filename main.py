@@ -21,6 +21,7 @@ if __name__ == '__main__':
                     local_id = row['local_id']
                     cursor.execute('UPDATE profiles SET status=1 WHERE name=%s', name)
                     connection.commit()
+                    print(f"New profile created with name {name}")
                     runSh(f"{wguard_dir}create.sh {name} {local_id}")
 
             with connection.cursor() as cursor:
