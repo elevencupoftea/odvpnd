@@ -9,13 +9,14 @@ echo "Create new client keys"
 
 echo "Create Config file"
 #SETTINGS
-IP=''
+IP='i'
 IP_FULL=$IP${2}
-SERVER_IP=''
+SERVER_IP='s'
 SERVER_PORT=51820
 DNS_1=$IP'1'
 DNS_2='9.9.9.9'
-USERNAME='core'
+USERNAME='u'
+WG_DIR='d'
 WWW_DIR="/home/${USERNAME}/wguard/www/public/profiles"
 read CLIENT_PRIVATE_KEY <keys/${1}_priv.key
 read SERVER_PUBLIC_KEY <keys/server_pub.key
