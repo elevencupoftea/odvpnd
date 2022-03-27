@@ -17,7 +17,7 @@ DNS_1=$IP'1'
 DNS_2='9.9.9.9'
 USERNAME='u'
 WG_DIR='d'
-WWW_DIR="/home/${USERNAME}/wguard/www/public/profiles"
+WWW_DIR="/home/${USERNAME}/${WG_DIR}/www/public/profiles"
 read CLIENT_PRIVATE_KEY <keys/${1}_priv.key
 read SERVER_PUBLIC_KEY <keys/server_pub.key
 read CLIENT_PUBLIC_KEY <keys/${1}_pub.key
