@@ -5,8 +5,8 @@ echo "Profile name is empty"
 else
 echo "Delete profile"
 read CLIENT_PUBLIC_KEY <keys/${1}_pub.key
-USERNAME='core'
-WWW_DIR="/home/${USERNAME}/wg_folder/www/public/profiles"
+WG_DIR='d'
+WWW_DIR="${WG_DIR}/www/public/profiles"
 rm keys/${1}_pub.key
 rm keys/${1}_priv.key
 rm $WWW_DIR/${1}.conf
