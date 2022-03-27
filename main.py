@@ -3,7 +3,7 @@ import time
 from datetime import datetime, timedelta
 import db
 
-wguard_dir = '/home/core/wguard/'
+wguard_dir = 'wg_dir/'
 
 
 def runSh(command):

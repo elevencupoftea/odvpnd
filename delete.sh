@@ -6,7 +6,7 @@ else
 echo "Delete profile"
 read CLIENT_PUBLIC_KEY <keys/${1}_pub.key
 USERNAME='core'
-WWW_DIR="/home/${USERNAME}/wguard/www/public/profiles"
+WWW_DIR="/home/${USERNAME}/wg_folder/www/public/profiles"
 rm keys/${1}_pub.key
 rm keys/${1}_priv.key
 rm $WWW_DIR/${1}.conf

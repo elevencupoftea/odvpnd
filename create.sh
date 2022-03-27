@@ -9,9 +9,9 @@ echo "Create new client keys"
 
 echo "Create Config file"
 #SETTINGS
-IP='192.168.11.'
+IP=''
 IP_FULL=$IP${2}
-SERVER_IP='62.109.8.224'
+SERVER_IP=''
 SERVER_PORT=51820
 DNS_1=$IP'1'
 DNS_2='9.9.9.9'
